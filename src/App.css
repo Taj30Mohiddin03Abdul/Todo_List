@@ -1,38 +1,155 @@
-.App {
+/* Global styles */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+}
+
+/* Main app container */
+.app {
+  background: #1e1e2f;
+  padding: 2rem;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #ffdd57;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Input section */
+.input-section {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.input-section input {
+  flex: 1;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.input-section button {
+  background: #ff6b6b;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.input-section button:hover {
+  background: #ff4757;
+}
+
+/* Todo list */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  background: #2d2d44;
+  margin-bottom: 0.8rem;
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+li:hover {
+  transform: translateY(-2px);
+  background: #3a3a55;
+}
+
+li.completed span {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+/* Task content */
+.task-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.task-content span {
+  font-size: 1rem;
+  font-weight: 500;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.task-content small {
+  font-size: 0.8rem;
+  color: #bbb;
+  margin-top: 0.2rem;
+}
+
+/* Actions (edit/delete) */
+.actions {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.actions button {
+  background: #444;
+  border: none;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.actions button:hover {
+  background: #666;
+}
+
+/* Edit section */
+.edit-section {
+  display: flex;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.edit-section input {
+  flex: 1;
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+.edit-section button {
+  background: #4cafef;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.edit-section button:hover {
+  background: #3996db;
 }
