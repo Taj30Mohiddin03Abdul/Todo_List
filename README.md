@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+📝 To-Do List App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack To-Do List Application built with React.js, Node.js (Express), and MySQL.
+This app allows users to add, edit, and delete tasks, with data persisted in a MySQL database.
 
-## Available Scripts
+🚀 Features
 
-In the project directory, you can run:
+✅ Add new tasks
 
-### `npm start`
+✏️ Edit existing tasks
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+❌ Delete tasks
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+💾 Data stored in MySQL database
 
-### `npm test`
+🔗 Frontend (React) connected to Backend (Express API)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+🛠️ Tech Stack
 
-### `npm run build`
+Frontend: React.js, Axios
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Backend: Node.js, Express.js, CORS, Body-Parser
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Database: MySQL (via mysql2 package)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+📂 Project Structure
+todo-app/
+│
+├── todo-backend/     # Express server + API
+│   ├── server.js
+│   ├── package.json
+│   └── ...
+│
+├── todo-frontend/    # React app
+│   ├── src/
+│   │   ├── components/
+│   │   ├── App.js
+│   │   └── ...
+│   ├── package.json
+│   └── ...
+│
+└── README.md
 
-### `npm run eject`
+⚙️ Setup Instructions
+1️⃣ Clone the Repository
+git clone https://github.com/your-username/todo-app.git
+cd todo-app
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2️⃣ Backend Setup
+cd todo-backend
+npm install
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Create a MySQL database:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+CREATE DATABASE todo_db;
+USE todo_db;
 
-## Learn More
+CREATE TABLE tasks (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(255) NOT NULL
+);
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Start the backend:
 
-### Code Splitting
+node server.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+➡️ Runs at http://localhost:5000
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3️⃣ Frontend Setup
 
-### Making a Progressive Web App
+Open a new terminal:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+cd todo-frontend
+npm install
+npm start
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+➡️ Runs at http://localhost:3000
 
-### Deployment
+🔗 API Endpoints
+Method	Endpoint	Description
+GET	/tasks	Get all tasks
+POST	/tasks	Add new task
+PUT	/tasks/:id	Update task by ID
+DELETE	/tasks/:id	Delete task by ID
+📸 Screenshots (Optional)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Add your app screenshots here
 
-### `npm run build` fails to minify
+🤝 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Pull requests are welcome. For major changes, open an issue first to discuss.
